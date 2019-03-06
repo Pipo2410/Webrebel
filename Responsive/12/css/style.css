@@ -1,0 +1,70 @@
+/* clearfix */
+.group:before,
+.group:after {
+    content: " ";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+
+/* general */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    color: #2f2f2f;
+    font: 0.9em/1.35em 'Avant Garde', 'Century Gothic', sans-serif;
+    padding: 1.4em;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* layout */
+
+
+/* media queries */
+@media screen and ( max-width: 599px ) {
+
+    article {
+        padding: 2em 0;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    article:last-child {
+        border: none;
+    }
+
+}
+
+@media screen and ( min-width: 600px ) {
+
+    .image,
+    .text {
+        float: left;
+    }
+
+    .image {
+        width: 40%;
+    }
+
+    .text {
+        width: 60%;
+    }
+
+}

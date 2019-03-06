@@ -1,0 +1,201 @@
+body {
+	color: #5D5D5D;
+	font-size: 17px;
+	line-height: 30px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	background: #f7f7f7;
+}
+
+.group:before,
+.group:after {
+    content: " "; 
+    display: table; 
+}
+
+.group:after {
+    clear: both;
+}
+
+.container {
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
+main {
+	padding: 70px 0;
+}
+
+h1, h2, h3 {
+	color: #252122;
+	font-size: 43px;
+	line-height: 30px;
+	font-weight: bold;
+	letter-spacing: -0.5px;
+	margin-top: 0;
+}
+
+h2 {
+	font-size: 23px;
+}
+
+p {
+	margin-bottom: 30px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+a {
+	color: #e53359;
+}
+
+.button {
+	color: #fff;
+	font-weight: 700;
+	background: #252122;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 5px;
+	padding: 12px 28px;
+}
+
+.box {
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 40px;
+}
+
+
+/* hlavicka */
+.site-header {
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	padding: 60px 0;
+}
+
+.site-header h1 {
+	letter-spacing: -2px;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+
+/* hlavny obsah */
+.content,
+.sidebar {
+	float: left;
+}
+
+.content {
+	width: 740px;
+	margin-right: 40px;
+}
+
+.content p:first-of-type {
+	font-style: italic;
+}
+
+.sidebar {
+	width: 340px;
+}
+
+.text {
+	padding: 30px;
+}
+
+header img {
+	width: 100%;
+	height: auto;
+}
+
+.post-header img {
+	width: 740px;
+	height: auto;
+}
+
+.sidebar-header img {
+	width: 340px;
+	height: auto;
+}
+
+
+/* aside s troma floatovanymi elemetami  */
+.pre-footer {
+	color: #858484;
+	background: #252122;
+	padding: 60px 0;
+}
+
+.column {
+	float: left;
+	width: 346px;
+	margin-right: 40px;
+}
+
+.column h2 {
+	color: #e3e3e3;
+	margin-top: 20px;
+}
+
+.column img {
+	width: 100%;
+	height: auto;
+}
+
+.column:last-child {
+	margin-right: 0;
+}
+
+
+/* about the author cez float */
+.about {
+	width: 700px;
+	margin: 60px auto;
+}
+
+.about h3 {
+	font-size: 18px;
+}
+
+.about > h3 {
+	text-align: center;
+}
+
+.byline {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.byline h3,
+.byline p {
+	margin-left: 160px;
+}
+
+.photo {
+	float: left;
+}
+
+.photo img {
+	border-radius: 50%;
+	border: 10px solid #eee;
+	margin-top: 10px;
+}
+
+
+/* about cez position */
+.position .photo {
+	float: none;
+}
+
+.position.about {
+	position: relative;
+	height: 220px;
+}
+
+.position .photo,
+.position .inside {
+	position: absolute;
+	top: 46px;
+}

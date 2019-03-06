@@ -1,0 +1,104 @@
+/* general */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* clearfix */
+.group:before,
+.group:after {
+    content: " ";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+body {
+    color: #2f2f2f;
+    font: 0.9em/1.35em 'Avant Garde', 'Century Gothic', sans-serif;
+    padding: 1.4em;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* media queries */
+@media ( max-width: 599px ) {
+
+    /* layout */
+    article {
+        padding: 2em 0;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    article:last-child {
+        border: none;
+    }
+
+}
+
+@media ( min-width: 600px ) {
+
+    article {
+        padding: 1em 0;
+    }
+
+}
+
+@media ( min-width: 600px ) and ( max-width: 1023px ) {
+
+    .image,
+    .text {
+        float: left;
+    }
+
+    .image {
+        width: 40%;
+    }
+
+    .text {
+        width: 60%;
+        padding-left: 2em;
+    }
+
+}
+
+@media ( min-width: 800px ) and ( max-width: 1023px ) {
+
+    .image {
+        width: 300px;
+    }
+
+}
+
+@media ( min-width: 1024px ) {
+
+    .container {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    article {
+        width: 300px;
+        float: left;
+        margin: 0 10px;
+    }
+
+    .image {
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,27 @@
+body, html {
+	margin: 0;
+}
+
+body {
+	color: #333;
+	font-family: "Goudy Old Style",Garamond,"Big Caslon","Times New Roman",serif;
+	background: #BEEB9F;
+	padding: 0 50px;
+	-webkit-font-smoothing: antialiased;
+}
+
+strong {
+	color: rgb(255, 97, 56);
+	font-style: italic;
+	text-shadow: 2px 2px 0px #000;
+}
+
+strong:hover {
+	color: #ffb29e;
+}
+
+p {
+	font-size: 45px;
+	line-height: 60px;
+	text-align: justify;
+}

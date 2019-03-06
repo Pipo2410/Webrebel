@@ -1,0 +1,499 @@
+html {
+	box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit
+}
+
+body {
+	color: #323232;
+	background: #eeefed;
+	font-size: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+
+.container:before,
+.group:before,
+.menu:before,
+.container:after,
+.group:after,
+.menu:after {
+	content: " ";
+	display: table
+}
+
+.container:after,
+.group:after,
+.menu:after {
+	clear: both
+}
+
+.container,
+.group,
+.menu {
+	*zoom: 1
+}
+
+a {
+	text-decoration: none
+}
+
+strong {
+	font-weight: 600
+}
+
+img {
+	max-width: 100%;
+	height: auto
+}
+
+.menu {
+	list-style: none;
+	padding-left: 0;
+	margin: 0
+}
+
+.menu li {
+	float: left
+}
+
+.fa {
+	vertical-align: middle
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 1.25em
+}
+
+.contact-bar,
+.personal a {
+	color: #fff
+}
+
+.contact-bar {
+	color: #fff;
+	background: #39a3d4;
+	font-size: .875em
+}
+
+.personal {
+	float: left;
+	margin: 2em 0;
+	width: 60%
+}
+
+.personal li:first-child {
+	margin-right: 10.4633782%
+}
+
+.personal .fa {
+	font-size: 2em;
+	margin-right: .35714286em
+}
+
+.social {
+	float: right;
+	margin: 1.28571429em 0
+}
+
+.social .fa {
+	font-size: 1.21428571em
+}
+
+.social-icon {
+	display: block;
+	width: 3.42857143em;
+	height: 3.42857143em;
+	line-height: 3.28571429em;
+	color: #989898;
+	background: #eeefed;
+	text-align: center;
+	border-radius: .14285714em;
+	margin-right: .14285714em
+}
+
+.social-icon:hover,
+.social-icon:focus {
+	color: #fff;
+	background: #5bd0ec
+}
+
+.nav-bar {
+	background: #f2f2f2
+}
+
+.logo {
+	float: left;
+	margin: 1.24em 0
+}
+
+.logo a {
+	color: #de5728;
+	display: block;
+	letter-spacing: -0.035em
+}
+
+.logo strong {
+	color: #323232
+}
+
+.logo .fa {
+	position: relative;
+	top: -0.06em
+}
+
+.navigation {
+	float: right
+}
+
+.navigation .fa {
+	display: block;
+	padding-bottom: 10px
+}
+
+.navigation li {
+	border-left: 1px solid #cecece
+}
+
+.navigation li:last-child {
+	border-right: 1px solid #cecece
+}
+
+.navigation a {
+	color: #a6a6a6;
+	display: block;
+	padding: 1.85em 0;
+	text-align: center;
+	width: 8.5em
+}
+
+.selected a,
+.navigation a:hover,
+.navigation a:focus {
+	color: #de5728
+}
+
+.text-center {
+	text-align: center
+}
+
+.post-header {
+	background: url('../img/cover.jpg') center -274px no-repeat
+}
+
+.post-title {
+	color: #fff;
+	font-size: 2.8125em;
+	font-weight: 600;
+	background: #de5728;
+	padding: .4em 1.02222222em;
+	border-radius: .15555556em;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: -0.04444444em;
+	margin-top: .8em 0
+}
+
+.post-content {
+	padding: 4em 0 8em
+}
+
+.post-content h2 {
+	color: #323232;
+	font-weight: 400;
+	font-size: 1.875em;
+	line-height: 1.4em;
+	margin-top: 0
+}
+
+.controls {
+	margin: 3.125em auto;
+	text-align: center
+}
+
+.controls li {
+	float: none;
+	display: inline-block
+}
+
+.controls a {
+	font-size: 1.375em;
+	font-weight: 300;
+	color: #39a3d4;
+	text-transform: uppercase;
+	padding: 0 1.13636364em;
+	line-height: 2.18181818em;
+	display: block
+}
+
+.controls a:hover,
+.controls a:focus,
+.controls .selected a {
+	color: #fff;
+	background: #39a3d4;
+	border-radius: .18181818em
+}
+
+.gallery {
+	font-size: 0
+}
+
+.gallery .container {
+	padding: 0
+}
+
+.gallery img {
+	width: 33.33333333%
+}
+
+.pre-footer {
+	color: #fff;
+	background: #323232;
+	text-align: center
+}
+
+.pre-footer .container {
+	padding: 2em 0 2.7em 0
+}
+
+.pre-footer p {
+	font-size: 1em;
+	line-height: 26px;
+	text-transform: uppercase
+}
+
+.pre-footer p strong {
+	font-size: 1.375em;
+	font-weight: 600;
+	text-transform: none;
+	display: block
+}
+
+.pre-footer .personal {
+	width: 100%;
+	margin: 1.5em 0 0
+}
+
+.pre-footer li {
+	float: none;
+	display: inline-block
+}
+
+footer {
+	font-size: .875em
+}
+
+footer p {
+	color: #a6a6a6;
+	float: left
+}
+
+footer p a {
+	color: #e75652;
+	font-weight: 600
+}
+
+footer .logo {
+	font-size: 2.28571429em;
+	color: #de5728;
+	margin: .66em;
+	margin-left: 0
+}
+
+footer p,
+footer .menu {
+	margin: 2.28571429em 0 2.28571429em 0
+}
+
+footer .menu {
+	color: #989898;
+	font-weight: 600;
+	text-transform: uppercase;
+	float: right
+}
+
+footer .menu a {
+	color: #989898
+}
+
+footer .menu a:hover,
+footer .menu a:focus {
+	text-decoration: underline
+}
+
+footer li:after {
+	color: #989898;
+	content: '/';
+	margin: 0 .57142857em
+}
+
+footer li:last-child:after {
+	content: ''
+}
+
+@media (max-width:1150px) {
+	.nav-bar .container {
+		padding-right: 0
+	}
+	.navigation li:last-child {
+		border-right: none
+	}
+}
+
+@media (max-width:845px) {
+	.logo {
+		margin: .8em
+	}
+	.navigation a {
+		padding: 1em 0;
+		width: 7.5em
+	}
+	article {
+		font-size: 85%
+	}
+	.post-content {
+		padding: 3.2em 0 5em
+	}
+	.pre-footer {
+		font-size: 90%
+	}
+	footer .logo {
+		margin-left: 16%
+	}
+	footer .menu {
+		width: 100%;
+		margin-top: 0;
+		text-align: center
+	}
+	footer .menu li {
+		float: none;
+		display: inline-block
+	}
+}
+
+@media (max-width:766px) {
+	.gallery img {
+		width: 50%
+	}
+	.post-content {
+		padding-bottom: 0
+	}
+	footer .logo {
+		margin-left: 11%
+	}
+}
+
+@media (max-width:740px) {
+	.nav-bar .logo,
+	.navigation {
+		float: none;
+		width: 100%
+	}
+	.nav-bar .logo {
+		font-size: 2.5em;
+		text-align: center;
+		margin-left: 0
+	}
+	.nav-bar .container {
+		padding-left: 0
+	}
+	.navigation {
+		border-top: 1px solid #cecece;
+		text-align: center
+	}
+	.navigation li {
+		width: 25%
+	}
+	.navigation li:first-child {
+		border-left: 0
+	}
+	.navigation a {
+		width: 100%
+	}
+}
+
+@media (max-width:660px) {
+	footer .logo {
+		margin-left: 8%
+	}
+}
+
+@media (max-width:605px) {
+	.personal {
+		width: auto
+	}
+	.personal li {
+		float: none
+	}
+	.personal li:first-child {
+		margin-bottom: .5em
+	}
+	.social {
+		font-size: 1.33em
+	}
+}
+
+@media (max-width:580px) {
+	footer .logo {
+		margin-left: 0
+	}
+}
+
+@media (max-width:600px) {
+	footer p,
+	footer .menu {
+		width: 100%;
+		text-align: center
+	}
+	footer .logo {
+		margin-bottom: 0
+	}
+	footer .author {
+		margin-top: 1.7em
+	}
+}
+
+@media (max-width:500px) {
+	.personal,
+	.social {
+		width: 100%;
+		text-align: center
+	}
+	.personal {
+		margin: 1.5em 0 0
+	}
+	.personal li {
+		display: inline-block
+	}
+	.social {
+		font-size: 1em;
+		margin-top: .8em
+	}
+	.social li {
+		width: 24%;
+		margin: 0 .4%
+	}
+	.social .social-icon {
+		width: 100%;
+		height: auto;
+		line-height: 2.3em
+	}
+	.post-title {
+		font-size: 3.2em;
+		line-height: 1.1em;
+		display: block;
+		text-align: center
+	}
+}
+
+@media (max-width:420px) {
+	.gallery img {
+		width: 100%
+	}
+}

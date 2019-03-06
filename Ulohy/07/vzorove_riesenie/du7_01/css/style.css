@@ -1,0 +1,113 @@
+/* general */
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+body {
+	padding: 25px;
+	background: #f7f6d3;
+}
+
+
+
+/* layout */
+.wrap {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+section {
+	color: #fff;
+	font: 16px/22px Rockwell, "Courier Bold", Courier, Georgia, serif;
+	background: #9F3FA3;
+	border-radius: 9px;
+	margin-bottom: 25px;
+
+	padding: 20px;
+	float: left;
+	width: 19.2%;
+	margin-right: 1%;
+
+	min-height: 300px; 
+}
+
+
+section:nth-child(1) { background: #3b9ae1; }
+section:nth-child(2) { background: #f6be00; }
+section:nth-child(3) { background: #e64134; }
+section:nth-child(4) { background: #eb70b1; }
+section:nth-child(5) { background: #0f1a5f; margin-right: 0; }
+
+
+
+/* clearfix */
+.group:before,
+.group:after {
+	content: " ";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+
+
+/* media queries */
+@media screen and ( max-width: 820px ) {
+	
+	section {
+		width: 49.5%; /* 2 elementy su vedla seba, to je 100%, ale medzi nimi je 1% margin, cize 99/2 = 49.5% */
+		margin-bottom: 1%; 
+		min-height: 200px; /* uz mozu byt o nieco nizsie */
+	}
+
+	section:nth-child(2),
+	section:nth-child(3) {
+		margin-right: 0; /* pri druhom a tretom elemente nechceme pravy margin, lebo teraz su na kraji */
+	}
+
+	section:nth-child(3) {
+		width: 100%; /* treti element je na cely riadok */
+	}
+
+}
+
+@media screen and ( max-width: 560px ) {
+
+	section {
+		/* uz ziadne marginy */
+		margin-right: 0;
+		
+		/* elementy budu na celu sirku, pod sebou, ziadne floaty */
+		width: 100%;
+		float: none;
+
+		/* uz im nebudeme nastavovat minimalnu vysku */
+		min-height: 0;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

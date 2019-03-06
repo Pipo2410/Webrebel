@@ -1,0 +1,323 @@
+/* GENERAL */
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	color: #323232;
+	background: #eeefed;
+	font-size: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.container:before,
+.group:before,
+.menu:before,
+.container:after,
+.group:after,
+.menu:after {
+	content: " ";
+	display: table;
+}
+
+.container:after,
+.group:after,
+.menu:after {
+	clear: both;
+}
+
+.container,
+.group,
+.menu {
+	*zoom: 1;
+}
+
+a {
+	text-decoration: none;
+}
+
+strong {
+	font-weight: 600;
+}
+
+.menu {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+.menu li {
+	float: left;
+}
+
+.fa {
+	vertical-align: middle;
+}
+
+.container {
+	max-width: 1150px;
+	margin: 0 auto;
+	padding: 0 1.25em; /* 20/16 */
+}
+
+.gallery .container {
+	padding: 0;
+}
+
+/* CONTACT */
+.contact-bar,
+.personal a {
+	color: #fff;
+}
+
+.contact-bar {
+	background: #39a3d4;
+	font-size: 0.875em; /* 14/16 */
+}
+
+.personal {
+	float: left;
+	margin: 2em 0 ; /* 29/14 */
+}
+
+.personal li:first-child {
+	margin-right: 5em; /* 70/14 */
+}
+
+.personal .fa {
+	font-size: 2em; /* 28/14 */
+	margin-right: 0.35714285714285715em; /* 5/14 */
+}
+
+.social {
+	float: right;
+	margin: 1.2857142857142858em 0; /* 18/14 */
+}
+
+.social .fa {
+	font-size: 1.2142857142857142em; /* 17/14 */
+}
+
+.social-icon {
+	display: block;
+	width: 3.4285714285714284em; /* 48/14 */
+	height: 3.4285714285714284em; /* 48/14 */
+	line-height: 3.2857142857142856em; /* 46/14 */
+
+	color: #989898;
+	background: #eeefed;
+	text-align: center;
+
+	border-radius: 0.14285714285714285em; /* 2/14 */
+	margin-left: 0.14285714285714285em; /* 2/14 */
+}
+
+.social-icon:hover,
+.social-icon:focus {
+	color: #fff;
+	background: #5bd0ec;
+}
+
+/*NAVIGATION */
+.nav-bar {
+	background: #f2f2f2;
+}
+
+.logo {
+	float: left;
+	margin: 1.24em 0;
+}
+
+.logo a {
+	color: #de5728;
+	display: block;
+	letter-spacing: -0.035em
+}
+
+.logo strong {
+	color: #323232;
+}
+
+.logo .fa {
+	position: relative;
+	top: - 0.06em;
+}
+
+.navigation {
+	float: right;
+}
+
+.navigation .fa {
+	display: block;
+	padding-bottom: 10px;
+}
+
+.navigation li {
+	border-left: 1px solid #cecece;
+}
+
+.navigation li:last-child {
+	border-right: 1px solid #cecece;
+}
+
+.navigation a {
+	color: #a6a6a6;
+	display: block;
+	text-align: center;
+	padding: 1.85em 0;
+	text-transform: uppercase;
+	width: 8.5em; /* 136/16 */
+}
+
+.selected a,
+.navigation a:hover,
+.navigation a:focus {
+	color: #de5728;
+}
+
+/* ARTICLE */
+.text-center {
+	text-align: center;
+}
+
+.post-header {
+	background: url('../img/cover.jpg') center -274px no-repeat;
+}
+
+.post-title {
+	color: #fff;
+	font-size: 2.8125em; /* 45/16 */
+	font-weight: 600;
+	background: #de5728;
+	padding: 0.4em 1.0222222222222221em; /* 18/45 */ /* 46/45 */
+	border-radius: 0.15555555555555556em; /* 7/45 */
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: -0.044444444444444446em; /* 2/45 */
+	margin: 0.8em 0; /* 36/45 */
+}
+
+.post-content {
+	padding-bottom: 150px;
+}
+
+.post-content h2 {
+	color: #323232;
+	font-weight: 400;
+	font-size: 1.875em; /* 30/16 */
+	line-height: 42px;
+}
+
+.controls {
+	width: 642px;
+	margin: 50px auto;
+	text-align: center;
+}
+
+.controls a {
+	font-size: 1.375em; /* 22/16 */
+	font-weight: 300;
+	color: #39a3d4;
+	text-transform: uppercase;
+	padding: 0 25px;
+	line-height: 48px;
+	display: block;
+}
+
+.controls a:hover,
+.controls a:focus,
+.controls .selected a {
+	color: #fff;
+	background: #39a3d4;
+	border-radius: 4px;
+}
+
+.gallery {
+	font-size: 0;
+}
+
+/* FOOTER */
+.pre-footer {
+	color: #fff;
+	background: #323232;
+	text-align: center;
+}
+
+.pre-footer .container {
+	width: 400px;
+	padding: 40px 0 60px 0;
+}
+
+.pre-footer p {
+	font-size: 1em;
+	line-height: 26px;
+	text-transform: uppercase;
+}
+
+.pre-footer strong {
+	font-size: 1.375em; /* 22/16 */
+	font-weight: 600;
+	text-transform: none;
+}
+
+.pre-footer .personal li {
+	margin-right: 0;
+}
+
+.pre-footer .personal li:first-child {
+	margin-right: 59px;
+}
+
+footer {
+	font-size: 0.875em; /* 14/16 */
+}
+
+footer .container {
+	background: url('../img/logo.png') left center no-repeat;
+}
+
+footer p {
+	color: #a6a6a6;
+	float: left;
+	padding-left: 200px;
+}
+
+footer p a {
+	color: #e75652;
+	font-weight: 600;
+}
+
+footer p,
+footer .menu {
+	margin: 32px 0 32px 0;
+}
+
+footer .menu {
+	font-weight: 600;
+	text-transform: uppercase;
+	float: right;
+}
+
+footer .menu a {
+	color: #989898;
+}
+
+footer .menu a:hover,
+footer .menu a:focus {
+	text-decoration: underline;
+}
+
+footer li:after {
+	color: #989898;
+	content: '/';
+	margin: 0 8px;
+}
+
+footer li:last-child:after {
+	content: '';
+}

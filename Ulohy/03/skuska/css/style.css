@@ -1,0 +1,195 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	text-decoration: none
+}
+
+html {
+	height: 100%
+}
+
+body {
+	background: #f6ede8;
+	color: #252122;
+	font-family: 'EB Garamond', serif;
+	overflow-x: hidden
+}
+
+input,
+select,
+textarea,
+button {
+	font-family: Arial, sans-serif
+}
+
+.site {
+	position: relative;
+	overflow: hidden
+}
+
+.left {
+	float: left
+}
+
+.right {
+	float: right
+}
+
+li {
+	list-style-type: none
+}
+
+.clear:after {
+	clear: both;
+	content: '';
+	display: block
+}
+
+.hidden {
+	display: none
+}
+
+.middled {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
+	height: 100%
+}
+
+
+/* GENERAL */
+.container {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 46px;
+	margin-bottom: 10px;
+}
+
+a {
+	color: #252222;
+}
+
+p {
+	margin-bottom: 15px;
+	font-size: 22px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.menu li {
+	float: left;
+}
+
+.site-header {
+	background: #f6ede8;
+	border-bottom: 1px solid #fff;
+	box-shadow: 0px 0px 20px 4px #252122;
+	padding: 30px 0;
+	position: fixed;
+	width: 100%;
+}
+
+.logo {
+	margin-right: 40px;
+	margin-bottom: 0;
+}
+
+.logo a {
+	display: block;
+	background: url('../img/pb-logo-box.svg') 0 0 no-repeat;
+		width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+}
+
+.navbar {
+	padding: 11px 0;
+}
+
+.navbar li {
+	margin-right: 25px;
+}
+
+.navbar li:last-child {
+	margin-right: 0;
+}
+
+.navbar a {
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.social li {
+	margin-right: 20px;
+}
+
+.social {
+	padding: 9px 0;
+}
+
+.social .fa {
+	font-size: 20px;
+}
+
+.social .fa:hover {
+	background: #f6ede8;
+}
+
+main {
+	padding: 150px 0;
+}
+
+.content {
+	width: 740px;
+	margin-right: 80px;
+}
+
+.box {
+	margin-bottom: 50px;
+}
+
+.box img {
+	width: 100%;
+}
+
+.sidebar {
+	width: 280px;
+}
+
+.sidebar p {
+	font-size: 14px;
+	line-height: 18px;
+	margin-top: 8px;
+}
+
+.sidebar-header {
+	border-top: 1px solid #252122;
+	border-bottom: 1px solid #252122;
+	margin-bottom: 30px;
+	padding-top: 30px;
+}
+
+.sidebar h1 {
+	margin-bottom: 30px;
+}
+
+.book:after {
+	content: '>';
+	margin-left: 15px;
+}
+
+.book a {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 15px;
+}

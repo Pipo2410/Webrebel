@@ -1,0 +1,72 @@
+body, html {
+	margin: 0;
+}
+
+body {
+	color: #fff;
+	background: #FE3747;
+	text-align: center;
+	padding: 25px 0;
+	font-family: "Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1 {
+	font-family: "Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;
+	font-size: 100px;
+}
+
+h2 {
+	display: none;
+}
+
+.speacial {
+	color: #333;
+	background: #75c6c5;
+	width: 300px;
+	margin: 50px auto;
+	padding: 20px;
+	border: 14px solid #fff; 
+	height: 70px;
+	overflow: hidden;
+}
+
+.main {
+	width: 50%;
+	margin: 50px auto;
+}
+
+.highlight {
+	color: #bada55;
+}
+
+p {
+	line-height: 22px;
+	margin-top: 50px;
+}
+
+a {
+	color: #FE3747;
+	background: #fff;
+	text-decoration: none;
+	padding: 2px 6px 3px 6px;
+	border-radius: 3px;
+	font-weight: bold;
+	display: inline-block;
+	width: 200px;
+	height: 60px;
+}
+
+a:hover {
+	background: #75c6c5;
+}
+
+.text-left {
+	text-align: left;
+}
+
+small {
+	font-weight: bold;
+	color: #bada55;
+	display: block;
+}

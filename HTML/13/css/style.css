@@ -1,0 +1,46 @@
+body, html {
+	margin: 0;
+}
+
+* {
+	outline: 3px solid black;
+}
+
+body {
+	color: #fff;
+	background: #FE3747;
+	text-align: center;
+	padding: 25px 0;
+	font-family: "Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1 {
+	background: #75c6c5;
+	font-family: "Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif;
+	font-size: 100px;
+}
+
+h2 {
+	display: none;
+}
+
+p {
+	line-height: 22px;
+	width: 50%;
+	margin: 50px auto;
+
+}
+
+a {
+	color: #FE3747;
+	background: #fff;
+	text-decoration: none;
+	padding: 2px 6px 3px 6px;
+	border-radius: 3px;
+	font-weight: bold;
+}
+
+a:hover {
+	background: #75c6c5;
+}

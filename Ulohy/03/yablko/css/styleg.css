@@ -1,0 +1,185 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	text-decoration: none
+}
+
+html {
+	height: 100%
+}
+
+body {
+	background: #f7f7f7;
+	color: #5D5D5D;
+	font-size: 17px;
+	font-family: 'Source Sans Pro', sans-serif;
+	overflow-x: hidden
+}
+
+input,
+select,
+textarea,
+button {
+	font-family: Arial, sans-serif
+}
+
+.site {
+	position: relative;
+	overflow: hidden
+}
+
+.left {
+	float: left
+}
+
+.right {
+	float: right
+}
+
+li {
+	list-style-type: none
+}
+
+.clear {
+	clear: both;
+	content: '';
+	display: block
+}
+
+.hidden {
+	display: none
+}
+
+.middled {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
+	height: 100%
+}
+
+.group:before,
+.group:after {
+    content: " ";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+
+/* GENERAL */
+.container {
+	width: 1120px;
+	margin: 0 auto;
+}
+
+h1, h2, h3 {
+	color: #252122;
+	font-size: 43px;
+	line-height: 30px;
+	margin-bottom: 28px;
+}
+
+h2 {
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+
+p {
+	line-height: 30px;
+	margin-bottom: 30px;
+	font-weight: 300;
+}
+
+.site-header {
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	padding: 60px 0;
+}
+
+.site-header h1 {
+	text-align: center;
+	letter-spacing: -2px;
+	margin-bottom: 0;
+}
+
+
+main {
+	padding: 60px 0;
+}
+
+.content {
+	width: 740px;
+	margin-right: 40px;
+}
+
+.content p:last-child {
+	margin-bottom: 0;
+}
+
+.content p:first-of-type {
+	font-style: italic;
+}
+
+.sidebar {
+	width: 340px;
+}
+
+.sidebar p:last-child {
+	margin-bottom: 0;
+}
+
+.box {
+	background: #fff;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.box header img {
+	width: 100%;
+	height: auto;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.text {
+	padding: 30px;
+}
+
+.button {
+	background: #252122;
+	color: #fff;
+	font-weight: 800;
+	padding: 12px 28px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.pre-footer {
+	background: #252122;
+	padding: 60px 0;
+}
+
+.column {
+	width: 345px;
+	margin-right: 42.5px;
+}
+
+.column:last-child {
+	margin-right: 0;
+}
+
+.column header img {
+	width: 100%;
+	height: auto;
+}
+
+.column p {
+	margin-bottom: 0;
+}

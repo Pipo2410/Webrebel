@@ -1,0 +1,20 @@
+body {
+	/*max-width: 1080px;*/
+	margin: 0 auto;
+}
+
+section {
+	color: #fff;
+	font: 20px/1.375em Rockwell, "Courier Bold", Courier, Georgia, serif;
+	font-weight: bold;
+	background: #9f3fa3;
+	border-radius: .35em;
+	margin: .5em 0;
+	padding: .75em;
+}
+
+section:nth-child(1) { background: #3b9ae1; }
+section:nth-child(2) { background: #e64134; }
+section:nth-child(3) { background: #f6be00; }
+section:nth-child(4) { background: #eb70b1; }
+section:nth-child(5) { background: #0f1a5f; }

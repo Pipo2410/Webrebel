@@ -1,0 +1,128 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+	background: #e74c3c;
+}
+
+a {
+	text-decoration: none;
+}
+
+main {
+	margin-top: 60px;
+}
+
+.wrapper {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.menu {
+	list-style: none;
+	text-align: center;
+}
+
+.menu li {
+	display: inline-block;
+	margin: 28px 3px;
+}
+
+.menu a {
+	color: #fff;
+	font-size: 12px;
+	padding: 12px 22px 11px;
+	text-transform: uppercase;
+	transition: .3s all;
+	border-radius: 4px;
+}
+
+.menu a:hover {
+	background: rgba(192, 57, 43, 0.6);
+}
+
+.logo {
+	text-align: center;
+	margin: 60px 0;
+}
+
+.logo a {
+	background: url('../img/logo.svg');
+	width: 260px;
+	height: 144px;
+	display: inline-block;
+	text-indent: -9999px;
+}
+
+.image {
+	background: url('../img/main.svg') 50% 0 no-repeat;
+	height: 540px;
+}
+
+article {
+	margin-top: 50px;
+}
+
+article .wrapper {
+	text-align: center;
+}
+
+article h1 {
+	color: #e74c3c;
+	font-size: 30px;
+	font-weight: normal;
+	margin-bottom: 40px;
+}
+
+article p {
+	font-family: 'Open Sans', sans-serif;
+	color: #6a6a6a;
+	font-size: 24px;
+	line-height: 44px;
+	font-weight: 300;
+	margin-bottom: 50px;
+}
+
+article .button {
+	margin: 60px auto 140px;
+}
+
+.button {
+	background: #e74c3c;
+	color: #fff;
+	font-size: 19px;
+
+	width: 100%;
+	max-width: 500px;
+	display: block;
+	padding: 20px 15px;
+	border: 1px solid #e74c3c;
+	border-radius: 4px;
+	letter-spacing: 1px;
+	transition: .3s all;
+}
+
+.button:hover {
+	border: 1px solid #e74c3c;
+	color: #e74c3c;
+	background: #fff;
+}
+
+footer {
+	background: #c0392b;
+	padding: 100px 0;
+}
+
+footer,
+footer .menu a {
+	color: #e74c3c;
+}
+
+footer .menu a {
+	font-size: 64px;
+}
+
+footer a:hover {
+	color: #fff;
+}

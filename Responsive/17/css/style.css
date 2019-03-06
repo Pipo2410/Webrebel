@@ -1,0 +1,435 @@
+/* GENERAL */
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	color: #323232;
+	background: #eeefed;
+	font-size: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.container:before,
+.group:before,
+.menu:before,
+.container:after,
+.group:after,
+.menu:after {
+	content: " ";
+	display: table;
+}
+
+.container:after,
+.group:after,
+.menu:after {
+	clear: both;
+}
+
+.container,
+.group,
+.menu {
+	*zoom: 1;
+}
+
+a {
+	text-decoration: none;
+}
+
+strong {
+	font-weight: 600;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.menu {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+.menu li {
+	float: left;
+}
+
+.fa {
+	vertical-align: middle;
+}
+
+.container {
+	max-width: 1150px;
+	margin: 0 auto;
+	padding: 0 1.25em; /* 20/16 */
+}
+
+.gallery .container {
+	padding: 0;
+}
+
+/* CONTACT */
+.contact-bar,
+.personal a {
+	color: #fff;
+}
+
+.contact-bar {
+	background: #39a3d4;
+	font-size: 0.875em; /* 14/16 */
+}
+
+.personal {
+	float: left;
+	margin: 2em 0 ; /* 29/14 */
+	width: 60%;
+}
+
+.personal li:first-child {
+	margin-right: 10.4633782%;
+}
+
+.personal .fa {
+	font-size: 2em; /* 28/14 */
+	margin-right: 0.35714285714285715em; /* 5/14 */
+}
+
+.social {
+	float: right;
+	margin: 1.2857142857142858em 0; /* 18/14 */
+}
+
+.social .fa {
+	font-size: 1.2142857142857142em; /* 17/14 */
+}
+
+.social-icon {
+	display: block;
+	width: 3.4285714285714284em; /* 48/14 */
+	height: 3.4285714285714284em; /* 48/14 */
+	line-height: 3.2857142857142856em; /* 46/14 */
+
+	color: #989898;
+	background: #eeefed;
+	text-align: center;
+
+	border-radius: 0.14285714285714285em; /* 2/14 */
+	margin-left: 0.14285714285714285em; /* 2/14 */
+}
+
+.social-icon:hover,
+.social-icon:focus {
+	color: #fff;
+	background: #5bd0ec;
+}
+
+/*NAVIGATION */
+.nav-bar {
+	background: #f2f2f2;
+}
+
+.logo {
+	float: left;
+	margin: 1.24em 0;
+}
+
+.logo a {
+	color: #de5728;
+	display: block;
+	letter-spacing: -0.035em
+}
+
+.logo strong {
+	color: #323232;
+}
+
+.logo .fa {
+	position: relative;
+	top: - 0.06em;
+}
+
+.navigation {
+	float: right;
+}
+
+.navigation .fa {
+	display: block;
+	padding-bottom: 10px;
+}
+
+.navigation li {
+	border-left: 1px solid #cecece;
+}
+
+.navigation li:last-child {
+	border-right: 1px solid #cecece;
+}
+
+.navigation a {
+	color: #a6a6a6;
+	display: block;
+	text-align: center;
+	padding: 1.85em 0;
+	text-transform: uppercase;
+	width: 8.5em; /* 136/16 */
+}
+
+.selected a,
+.navigation a:hover,
+.navigation a:focus {
+	color: #de5728;
+}
+
+/* ARTICLE */
+.text-center {
+	text-align: center;
+}
+
+.post-header {
+	background: url('../img/cover.jpg') center -274px no-repeat;
+}
+
+.post-title {
+	color: #fff;
+	font-size: 2.8125em; /* 45/16 */
+	font-weight: 600;
+	background: #de5728;
+	padding: 0.4em 1.0222222222222221em; /* 18/45 */ /* 46/45 */
+	border-radius: 0.15555555555555556em; /* 7/45 */
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: -0.044444444444444446em; /* 2/45 */
+	margin: 0.8em 0; /* 36/45 */
+}
+
+.post-content {
+	padding: 4em 0 8em;
+}
+
+.post-content h2 {
+	color: #323232;
+	font-weight: 400;
+	font-size: 1.875em; /* 30/16 */
+	line-height: 1.4em; /* 42/30 */
+	margin-top: 0;
+}
+
+.controls {
+	margin: 3.125em auto; /* 50/16 */
+	text-align: center;
+}
+
+.controls li {
+	float: none;
+	display: inline-block;
+}
+
+.controls a {
+	font-size: 1.375em; /* 22/16 */
+	font-weight: 300;
+	color: #39a3d4;
+	text-transform: uppercase;
+	padding: 0 1.1363636363636365em; /* 25/22 */
+	line-height: 2.1818181818181817em; /* 48/22 */
+	display: block;
+}
+
+.controls a:hover,
+.controls a:focus,
+.controls .selected a {
+	color: #fff;
+	background: #39a3d4;
+	border-radius: 0.18181818181818182em; /* 4/22 */
+}
+
+.gallery {
+	font-size: 0;
+}
+
+.gallery img {
+	width: 33.333333333%;
+}
+
+/* FOOTER */
+.pre-footer {
+	color: #fff;
+	background: #323232;
+	text-align: center;
+}
+
+.pre-footer .container {
+	padding: 2em 0 2.7em 0; /* 40/16 */ /* 60/16 */
+}
+
+.pre-footer p {
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.pre-footer .personal {
+	width: 100%;
+	margin: 1.5em 0 0;
+}
+
+.pre-footer li {
+	float: none;
+	display: inline-block;
+}
+
+.pre-footer strong {
+	font-size: 1.375em; /* 22/16 */
+	font-weight: 600;
+	text-transform: none;
+	display: block;
+}
+
+footer {
+	font-size: 0.875em; /* 14/16 */
+}
+
+footer .logo {
+	font-size: 2.2857142857142856em; /* 32/14 */
+	color: #de5728;
+	margin: 0.66em;
+	margin-left: 0;
+}
+
+footer p {
+	color: #a6a6a6;
+	float: left;
+}
+
+footer p a {
+	color: #e75652;
+	font-weight: 600;
+}
+
+footer p,
+footer .menu {
+	margin: 2.2857142857142856em 0 2.2857142857142856em 0; /* 32/14 */ /* 32/14 */
+}
+
+footer .menu {
+	font-weight: 600;
+	text-transform: uppercase;
+	float: right;
+}
+
+footer .menu a {
+	color: #989898;
+}
+
+footer .menu a:hover,
+footer .menu a:focus {
+	text-decoration: underline;
+}
+
+footer li:after {
+	color: #989898;
+	content: '/';
+	margin: 0 0.5714285714285714em; /* 8/14 */
+}
+
+footer li:last-child:after {
+	content: '';
+}
+
+
+/* MEDIA QUERIES */
+@media ( max-width: 1150px ) {
+
+	.nav-bar .container {
+		padding-right: 0;
+	}
+
+	.navigation li:last-child {
+		border-right: none;
+	}
+
+	.gallery img {
+		width: 50%;
+	}
+
+}
+
+@media ( max-width: 766px ) {
+
+	.gallery img {
+		width: 50%;
+	}
+
+}
+
+@media ( max-width: 639px ) {
+
+	.contact-bar {
+		/*font-size: 70%;*/
+	}
+
+	.personal {
+		width: auto;
+	}
+
+	.personal li {
+		float: none;
+	}
+
+	.personal li:first-child {
+		margin-bottom: 0.5em;
+	}
+
+	.social {
+		font-size: 1.33em;
+	}
+
+}
+
+
+@media ( max-width: 502px ) {
+
+	.personal,
+	.social {
+		width: 100%;
+		text-align: center;
+	}
+
+	.personal {
+		margin: 1.5em 0 0;
+	}
+
+	.personal li {
+		display: inline-block;
+	}
+
+	.social {
+		font-size: 1em;
+		margin-top: .8em;
+	}
+
+	.social li {
+		width: 24%;
+		margin: 0 0.4%
+	}
+
+	.social .social-icon {
+		width: 100%;
+		height: auto;
+		line-height: 2.3em;
+	}
+
+}
+
+
+@media ( max-width: 420px ) {
+
+	.gallery img {
+		width: 100%;
+	}
+
+}

@@ -1,0 +1,15 @@
+.container {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.photo {
+	width: 300px;
+}
+
+.loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

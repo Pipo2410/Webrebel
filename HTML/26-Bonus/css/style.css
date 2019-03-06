@@ -1,0 +1,61 @@
+/* general */
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+/* clearfix */
+.group:before,
+.group:after {
+	content: ' ';
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+body {
+	color: #fff;
+	font: 20px Rockwell, 'Courier Bold', Georgia, serif;
+	font-weight: bold;
+	background: #f7f6d3;
+	padding: 0 20px;
+}
+
+footer {
+	color: #000;
+}
+
+/* layout */
+.group {
+	margin: 30px auto;
+	max-width: 800px;
+}
+
+p {
+	padding: 0 33px;
+}
+
+article, .box {
+	border-radius: 8px;
+}
+
+article {
+	background: #3b9ae1;
+	margin-right: 20px;
+	width: 530px;
+	height: 300px;
+
+	float: left;
+}
+
+.box {
+	background: #e64134;
+	margin-bottom: 20px;
+	height: 200px;
+}
+
+.sidebar {
+	width: 250px;
+	float: right;
+
+}

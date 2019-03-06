@@ -1,75 +1,55 @@
 (function($) {
 
-	// var cover = $('#cover'), 
-	// 	covers = $('.fadecovers');
-
-	// covers.children().not(':last').hide();
-
-	// var sliderInterval = setInterval(function() {
-	// 	covers.children().last()
-	// 		.fadeOut(1500, function() { $(this).prependTo(covers); })
-	// 		.prev().fadeIn(1500);
-	// }, 3000);
-
-	// covers.on('click', function() {
-	// 	clearInterval( sliderInterval );
-	// });
-
-
-})(jQuery);
-
-
-
-var cover = $('#cover'),
+	var cover = $('#cover'),
 	covers = $('.fadecovers');
 
-covers.children(':not(:last)').hide();
+	covers.children(':not(:last)').hide();
 
-var Slider = {
+	var Slider = {
 
-	intervalID: null,
-	running: false,
+		intervalID: null,
+		running: false,
 
-	set: function( id ) {
-		this.intervalID = id;
-	},
+		set: function( id ) {
+			this.intervalID = id;
+		},
 
-	get: function() {
-		return 'IDcko intevalu je: ' + this.intervalID;	
-	},
+		get: function() {
+			return 'IDcko intevalu je: ' + this.intervalID;	
+		},
 
-	start: function() {
-		this.intervalID = setInterval(function() {
-			covers.children(':last')
-				.fadeOut(500, function() { $(this).prependTo( covers ) })
-				.prev().fadeIn(500);
-		}, 1000);
+		start: function() {
+			this.intervalID = setInterval(function() {
+				covers.children(':last')
+					.fadeOut(500, function() { $(this).prependTo( covers ) })
+					.prev().fadeIn(500);
+			}, 1000);
 
-		this.running = true;
-		console.log('zacali sme');
-	},
+			this.running = true;
+			console.log('zacali sme');
+		},
 
-	pause: function() {
-		clearInterval(this.intervalID);
-		this.intervalID = null;
-		
-		this.running = false;
-		console.log('zapauzovali sme');
-	},
+		pause: function() {
+			clearInterval(this.intervalID);
+			this.intervalID = null;
+			
+			this.running = false;
+			console.log('zapauzovali sme');
+		},
 
-	resume: function() {
-		if(!this.intervalID) this.start();
-	},
+		resume: function() {
+			if(!this.intervalID) this.start();
+		},
 
-	toggle: function() {
-		if(this.running) this.pause()
-		else this.resume();
+		toggle: function() {
+			if(this.running) this.pause()
+			else this.resume();
+		}
 	}
 
-}
+	Slider.start();
+	covers.on('click', function() {
+		Slider.toggle();
+	});
 
-Slider.start();
-
-covers.on('click', function() {
-	Slider.toggle();
-})
+})(jQuery);

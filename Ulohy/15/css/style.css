@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.cover,
+/* .cover,
 .fadecovers {
     width: 800px;
     height: 400px;
@@ -23,4 +23,19 @@
     position: absolute;
 	top: 10px;
 	left: 10px;
+} */
+
+
+.cover {
+    width: 800px;
+    height: 600px;
+}
+
+.fadecovers {
+    border: 5px solid #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
 }

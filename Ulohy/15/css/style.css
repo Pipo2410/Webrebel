@@ -1,0 +1,26 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+.cover,
+.fadecovers {
+    width: 800px;
+    height: 400px;
+}
+
+.fadecovers {
+    position: relative;
+    padding: 10px;
+    background: #e3e3e3;
+    border-radius: 6px;
+    left: 50%;
+    margin-left: -410px;
+    margin-top: 5%;
+}
+
+.cover {
+    position: absolute;
+	top: 10px;
+	left: 10px;
+}

@@ -34,7 +34,7 @@ var coverAnimation = setInterval(function() {
 	
 	covers.children().last()
 		.fadeOut(1500, function() { $(this).prependTo(covers); })
-		.prev().fadeIn(1500)
+		.prev().fadeIn(1500);
 
 }, 3000);
 

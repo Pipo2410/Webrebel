@@ -1,41 +1,50 @@
-*, *::after, *::before {
-    margin: 0;
-    padding: 0;
-}
-
-/* .cover,
+.cover,
 .fadecovers {
-    width: 800px;
-    height: 400px;
+	width: 800px;
+	height: 400px;
 }
 
 .fadecovers {
-    position: relative;
-    padding: 10px;
-    background: #e3e3e3;
-    border-radius: 6px;
-    left: 50%;
-    margin-left: -410px;
-    margin-top: 5%;
+	position: relative;
+	padding: 10px;
+	background: #e3e3e3;
+	border-radius: 6px;
+	left: 50%;
+	margin-left: -410px;
+	margin-top: 5%;
 }
 
 .cover {
-    position: absolute;
+	position: absolute;
 	top: 10px;
 	left: 10px;
-} */
-
-
-.cover {
-    width: 800px;
-    height: 600px;
 }
 
-.fadecovers {
-    border: 5px solid #ccc;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
+.arrow {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: rgba(228,229,96,1);
+	border-radius: 50%;
+	padding: 10px;
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	top: 172px;
+	z-index: 2;
+	text-indent: -9999em;
+	opacity: .9;
+}
+
+.arrow:hover {
+	opacity: 1;
+}
+
+.prev {
+	background-image: url('../img/left.png');
+	left: -36px;
+}
+
+.next {
+	background-image: url('../img/right.png');
+	right: -36px;
 }

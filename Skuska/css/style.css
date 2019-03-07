@@ -99,6 +99,9 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.5rem !important; }
 
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
 .u-margin-top-big {
   margin-top: 8rem !important; }
 
@@ -149,6 +152,12 @@ body {
   .btn--white::after {
     background-color: #fff; }
 
+.btn--green {
+  background-color: #55c57a;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #55c57a; }
+
 .btn-text {
   font-size: 1.6rem;
   display: inline-block;
@@ -168,17 +177,21 @@ body {
 
 .card {
   position: relative;
-  height: 50rem;
+  height: 52rem;
   -webkit-perspective: 150rem;
-  perspective: 150rem; }
+  perspective: 150rem;
+  /****
+    ** front style
+    ****/ }
   .card__side {
     overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    height: 50rem;
+    height: 52rem;
     width: 100%;
     border-radius: .4rem;
+    -webkit-transition: all .8s;
     transition: all .8s;
     -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -187,12 +200,22 @@ body {
     .card__side--front {
       background-color: #fff; }
     .card__side--back {
+      -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg); }
       .card__side--back-1 {
+        background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7738));
         background-image: linear-gradient(to right bottom, #ffb900, #ff7738); }
+      .card__side--back-2 {
+        background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485));
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side--back-3 {
+        background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa));
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
+    -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
+    -webkit-transform: rotateY(0);
     transform: rotateY(0); }
   .card__cta {
     position: absolute;
@@ -214,9 +237,52 @@ body {
     background-size: cover;
     height: 23rem;
     background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .card__picture--1 {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7738)), url("../img/nat-5.jpg");
       background-image: linear-gradient(to right bottom, #ffb900, #ff7738), url("../img/nat-5.jpg"); }
+    .card__picture--2 {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485)), url("../img/nat-5.jpg");
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../img/nat-5.jpg"); }
+    .card__picture--3 {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa)), url("../img/nat-5.jpg");
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../img/nat-5.jpg"); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%; }
+    .card__heading-span {
+      padding: 1rem 1.5rem;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone; }
+      .card__heading-span--1 {
+        background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.85)), to(rgba(255, 119, 56, 0.85)));
+        background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 56, 0.85)); }
+      .card__heading-span--2 {
+        background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.85)), to(rgba(40, 180, 133, 0.85)));
+        background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+      .card__heading-span--3 {
+        background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.85)), to(rgba(86, 67, 250, 0.85)));
+        background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.5rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px dotted #eee; }
 
 .composition {
   position: relative; }
@@ -322,5 +388,5 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0;
+  padding: 20rem 0;
   margin-top: -10rem; }

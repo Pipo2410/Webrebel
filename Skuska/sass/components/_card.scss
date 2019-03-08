@@ -1,31 +1,58 @@
+.card-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: $grid-width;
+    margin: 0 auto;
+}
+
 .card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+
     position: relative;
-    height: 52rem;
     -webkit-perspective: 150rem;
             perspective: 150rem;
-            
+    height: 50rem;
+    
     &__side {
-        overflow: hidden;
         position: absolute;
         top: 0;
         left: 0;
-        height: 52rem;
         width: 100%;
+        height: 50rem;
+        -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+                box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
         border-radius: .4rem;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
         -webkit-transition: all .8s;
         transition: all .8s;
-        -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black ,.15);
-        box-shadow: 0 1.5rem 4rem rgba($color-black ,.15);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        
+        overflow: hidden;
+
         &--front {
             background-color: $color-white;
         }
-        
+
         &--back {
             -webkit-transform: rotateY(180deg);
                     transform: rotateY(180deg);
+
+            display: -webkit-box;
+
+            display: -ms-flexbox;
+
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
 
             &-1 {
                 background-image: -webkit-gradient(linear, left top, right bottom, from($color-secondary-light), to($color-secondary-dark));
@@ -42,53 +69,31 @@
                 background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
             }
         }
+
     }
 
     &:hover &__side--front {
         -webkit-transform: rotateY(-180deg);
                 transform: rotateY(-180deg);
     }
-    
+
     &:hover &__side--back {
-        -webkit-transform: rotateY(0);
-                transform: rotateY(0);
-    }
-
-    &__cta {
-        @include absCenter;
-        width: 90%;
-        text-align: center;
-    }
-
-    &__price-box {
-        color: $color-white;
-        margin-bottom: 8rem;
-    }
-
-    &__price-only {
-        font-size: 1.4rem;
-        text-transform: uppercase;
-    }
-
-    &__price-value {
-        font-size: 6rem;
-        font-weight: 100;
+        -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
     }
 
     /****
-    ** front style
+    ** front styling 
     ****/
-
-
-
-    &__picture {
+    &__image {
         background-size: cover;
+        background-position: top;
         height: 23rem;
         background-blend-mode: screen;
+
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
                 clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-
-
 
         &--1 {
             background-image: -webkit-gradient(linear, left top, right bottom, from($color-secondary-light), to($color-secondary-dark)), url('../img/nat-5.jpg');
@@ -108,54 +113,81 @@
 
     &__heading {
         font-size: 2.8rem;
-        font-weight: 300;
         text-transform: uppercase;
         text-align: right;
-        color: $color-white;
         position: absolute;
         top: 12rem;
         right: 2rem;
-        width: 75%;
-
+        color: $color-white;
+        font-weight: 100;
+        width: 80%;
         &-span {
             padding: 1rem 1.5rem;
-            box-decoration-break: clone;
             -webkit-box-decoration-break: clone;
+                    box-decoration-break: clone;
 
             &--1 {
-                background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-secondary-light, .85)), to(rgba($color-secondary-dark, .85)));
-                background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
+                background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-secondary-light, .8)), to(rgba($color-secondary-dark, .8))),;
+                background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .8), rgba($color-secondary-dark, .8)),
             }
 
             &--2 {
-                background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-primary-light, .85)), to(rgba($color-primary-dark, .85)));
-                background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85), rgba($color-primary-dark, .85));
+                background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-primary-light, .8)), to(rgba($color-primary-dark, .8))),;
+                background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)),
             }
 
             &--3 {
-                background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-tertiary-light, .85)), to(rgba($color-tertiary-dark, .85)));
-                background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .85), rgba($color-tertiary-dark, .85));
+                background-image: -webkit-gradient(linear, left top, right bottom, from(rgba($color-tertiary-light, .8)), to(rgba($color-tertiary-dark, .8))),;
+                background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .8), rgba($color-tertiary-dark, .8)),
             }
         }
     }
 
     &__details {
-        padding: 3rem;
-        
+        padding: 2.5rem 4rem;
+
         ul {
             list-style: none;
-            width: 80%;
-            margin: 0 auto;
-            
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
             li {
-                text-align: center;
+                font-size: 1.4rem;
                 padding: 1rem;
-                font-size: 1.5rem;
+                width: 100%;
+                text-align: center;
                 &:not(:last-child) {
-                    border-bottom: 1px dotted $color-grey-light-2;
+                    border-bottom: 1px dotted $color-grey-dark;
                 }
             }
         }
+    }
 
+
+
+    /****
+    ** back styling 
+    ****/ 
+
+    &__cta {
+        padding: 3rem;
+        text-align: center;
+    }
+
+    &__price-box {
+        color: $color-white;
+        margin-bottom: 6rem;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
     }
 }

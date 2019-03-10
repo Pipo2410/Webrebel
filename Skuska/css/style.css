@@ -659,6 +659,77 @@ body {
     top: 40%;
     text-align: center; }
 
+.navigation {
+  /***********
+    *** Button
+    ************/
+  /***********
+    *** Background
+    ************/
+  /***********
+    *** LIST
+    ************/
+  /***********
+    *** function
+    ************/ }
+  .navigation__checkbox {
+    display: none; }
+  .navigation__button {
+    background-color: #fff;
+    width: 7rem;
+    height: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 20;
+    text-align: center;
+    cursor: pointer; }
+  .navigation__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+      width: 3rem;
+      height: 0.2rem;
+      background-color: #000;
+      transition: all .2s; }
+    .navigation__icon::before, .navigation__icon::after {
+      content: '';
+      position: absolute;
+      left: 0; }
+    .navigation__icon::before {
+      bottom: .8rem; }
+    .navigation__icon::after {
+      bottom: -.8rem; }
+  .navigation__background {
+    position: fixed;
+    top: 7rem;
+    right: 7rem;
+    background-image: radial-gradient(#28b485, #7ed56f);
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    z-index: 19;
+    border-radius: 50%;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  .navigation__nav {
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .navigation__list {
+    list-style: none; }
+  .navigation__link {
+    text-decoration: none;
+    text-transform: uppercase; }
+  .navigation__button:hover .navigation__icon:before {
+    bottom: 1rem; }
+  .navigation__button:hover .navigation__icon::after {
+    bottom: -1rem; }
+  .navigation__checkbox:checked ~ .navigation__background {
+    transform: scale(80); }
+
 .section-about {
   padding: 25rem 0;
   margin-top: -20vh;

@@ -42,18 +42,18 @@
     position: relative;
 }
 
-.section-form {
+.section-book {
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
     padding: 20rem 0;
 
     .book {
-        background-image: 
-            linear-gradient(105deg,
+        height: 50rem;
+        background-image: linear-gradient(105deg,
             rgba($color-white, .9) 0%,
             rgba($color-white, .9) 50%,
-            transparent 50%), url('../img/nat-10.jpg');
+            transparent 50%),
+            url('../img/nat-10.jpg');
         background-size: cover;
-        background-position: top;
 
         &__form {
             width: 50%;

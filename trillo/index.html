@@ -12,39 +12,44 @@
     </head>
     <body>
 
-        <div class="container">
-            <header class="header">
-                <img src="img/logo.png" alt="" class="logo">
+      <div class="container">
+          <header class="header">
+              <img src="img/logo.png" alt="Trillo logo" class="logo">
 
-                <form action="#" class="search">
-                    <input type="text" name="" id="" class="search__input" placeholder="Search hotels">
-                    <button class="search__button">
-                        <svg class="search__icon">
-                            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
-                        </svg>
-                    </button>
-                </form>
+              <form action="#" class="search">
+                  <input type="text" class="search__input" placeholder="Search hotels">
+                  <button class="search__button">
+                      <svg class="search__icon">
+                          <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                      </svg>
+                  </button>
+              </form>
 
-                <div class="user-nav">
-                    <div class="user-nav__icon-box">
-                        <svg class="user-nav__icon">
-                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
-                        </svg>
-                        <span class="user-nav__notification">7</span>
-                    </div>
-                    <div class="user-nav__icon-box">
-                        <svg class="user-nav__icon">
-                            <use xlink:href="img/sprite.svg#icon-chat"></use>
-                        </svg>
-                        <span class="user-nav__notification">7</span>
-                    </div>
-                    <div class="user-nav__user">
-                        <img src="img/user.jpg" alt="" class="user-nav__photo">
-                        <span class="user-nav__name">Peter</span>
-                    </div>
-                </div>
-            </header>
-        </div>
+              <div class="nav-user">
+                  <div class="nav-user__icon-box">
+                      <svg class="nav-user__icon">
+                          <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                      </svg>
+                      <span class="nav-user__notification">7</span>
+                  </div>
+                  <div class="nav-user__icon-box">
+                      <svg class="nav-user__icon">
+                          <use xlink:href="img/sprite.svg#icon-chat"></use>
+                      </svg>
+                      <span class="nav-user__notification">13</span>
+                  </div>
+                  <div class="nav-user__user">
+                      <img src="img/user.jpg" alt="Peter" class="nav-user__photo">
+                      <span class="nav-user__name">Peter</span>
+                  </div>
+              </div>
+          </header>
+
+            <div class="content">
+                <nav class="sidebar"></nav>
+                <main class="hotel-view"></main>
+            </div>
+      </div>
         
     </body>
 </html>

@@ -16,12 +16,11 @@
    <body>
 
     <div class="navigation">
-        <input type="checkbox" id="navi-toggle" class="navigation__checkbox">
-        <label class="navigation__button" for="navi-toggle">
+        <input type="checkbox" name="navigation" id="nav-toggle" class="navigation__checkbox">
+        <label for="nav-toggle" class="navigation__button">
             <span class="navigation__icon">&nbsp;</span>
         </label>
         <div class="navigation__background">&nbsp;</div>
-
         <nav class="navigation__nav">
             <ul class="navigation__list">
                 <li class="navigation__item">
@@ -31,19 +30,19 @@
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#feature" class="navigation__link">
+                    <a href="#features" class="navigation__link">
                         <span>02</span>
                         Your benefits
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#tour" class="navigation__link">
+                    <a href="#tours" class="navigation__link">
                         <span>03</span>
                         Popular tours
                     </a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#story" class="navigation__link">
+                    <a href="#stories" class="navigation__link">
                         <span>04</span>
                         Stories
                     </a>
@@ -68,7 +67,7 @@
                 <span class="heading-primary--main">Outdoors</span>
                 <span class="heading-primary--sub">is where life happens</span>
             </h1>
-            <a href="#tour" class="btn btn--white btn--animated discover">Discover our tours</a>
+            <a href="#tours" class="btn btn--white btn--animated discover">Discover our tours</a>
         </div>
     </header>
 
@@ -99,7 +98,7 @@
             </div>
         </section>
 
-        <section class="section-features" id="feature">
+        <section class="section-features" id="features">
             <div class="wrapper">
                 <div class="feature-box">
                     <i class="feature-box__icon icon-basic-world"></i>
@@ -124,7 +123,7 @@
             </div>
         </section>
 
-        <section class="section-tours" id="tour">
+        <section class="section-tours" id="tours">
             <div class="u-text-center u-margin-bottom-big">
                 <h2 class="heading-secondary">Most popular tours</h2>
             </div>
@@ -210,11 +209,11 @@
             </div>
 
             <div class="u-text-center u-margin-top-huge">
-                <a href="#tour" class="btn btn--green discover">Discover our tours</a>
+                <a href="#tours" class="btn btn--green discover">Discover our tours</a>
             </div>
         </section>
 
-        <section class="section-stories" id="story">
+        <section class="section-stories" id="stories">
             <div class="bg-video">
                 <video class="bg-video__content" loop autoplay muted>
                     <source src="img/video.mp4" type="video/mp4">
@@ -423,7 +422,29 @@
         </div>
     </footer>
 
-    <div id="popup" class="popup">
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <a href="#tours" class="popup__close">&times;</a>
+            <div class="popup__gallery">
+                <img src="img/nat-8.jpg" alt="" class="popup__photo">
+                <img src="img/nat-9.jpg" alt="" class="popup__photo">
+            </div>
+            <div class="popup__text">
+                <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important - Please read these terms before booking</h3>
+                <p class="popup__paragraph u-margin-bottom-medium">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim et laboriosam quidem porro, fugit aliquid pariatur! Architecto sit aut eaque cum officia repellendus? Eos voluptate amet blanditiis eum neque nulla cumque quam? Perspiciatis ipsa natus, laboriosam unde quasi molestias dolores consequuntur quis aut esse nam eaque. Sunt maxime vel tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aliquam porro aliquid voluptas? Corrupti aliquam nisi ullam? Eveniet molestias illum libero reiciendis eligendi sint aut.</p>
+                <a href="#book" class="btn btn--green" id="booking">Book now &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="backToTop" class="backToTop">
+        <svg class="backToTop__icon">
+            <use xlink:href="img/backToTop.svg"></use>
+        </svg>
+    </div>
+
+    <!-- <div id="popup" class="popup">
         <div class="popup__content">
             <a href="#tour" class="popup__close">&times;</a>
             <div class="popup__images">
@@ -437,7 +458,7 @@
                 <a href="#" class="btn btn--green popup__btn">Book now!</a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <script src="js/jquery.js"></script>
     <script src="js/script.js"></script>
@@ -513,4 +534,47 @@
                 col 3 of 4
             </div>
         </div>
+    </div> -->
+
+    <!-- <div class="navigation">
+        <input type="checkbox" id="navi-toggle" class="navigation__checkbox">
+        <label class="navigation__button" for="navi-toggle">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="#about" class="navigation__link">
+                        <span>01</span>
+                        About natours
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#feature" class="navigation__link">
+                        <span>02</span>
+                        Your benefits
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#tour" class="navigation__link">
+                        <span>03</span>
+                        Popular tours
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#story" class="navigation__link">
+                        <span>04</span>
+                        Stories
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#book" class="navigation__link">
+                        <span>05</span>
+                        Book now
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div> -->

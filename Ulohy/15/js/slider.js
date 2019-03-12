@@ -15,6 +15,7 @@ var Slider = {
 		// skryjeme vsetky, okrem posledneho
 		this.images.not(':last').hide();
 
+		// console.log(this.images);
 	},
 
 	prev: function() {

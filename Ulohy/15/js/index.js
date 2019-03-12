@@ -1,81 +1,59 @@
 var Slider = {
-
+    
     images: null,
-    selector: null,
     current: null,
 
     init: function(data) {
         this.images = $(data.selector);
-        this.selector = data.selector;
-        this.images.not(':last').hide();
+        this.images.not(':last-child').hide();
     },
 
     prev: function() {
         this.current = this.images.filter(':visible');
-        var prev = this.current.prev( this.selector );
 
-        if( prev.length < 1 ) {
+        var prev = this.current.prev( '.gallery__img' );
+
+        if(prev.length < 1) {
             prev = this.images.last();
         }
 
         this.change(this.current, prev);
     },
-
+    
     next: function() {
-
         this.current = this.images.filter(':visible');
 
-        var next = this.current.next( this.selector );
+        var next = this.current.next( '.gallery__img' );
 
-        console.log(next.length);
-
-        if( next.length < 1) {
+        if(next.length < 1) {
             next = this.images.first();
         }
 
-        // console.log(next.length);
-
-        this.change( this.current, next );
-
+        this.change(this.current, next);
     },
 
-    change: function( currentElement, prevElement) {
+    change: function(currentImage, prevImage) {
 
-        if( this.images.filter(':animated').length > 0) {
+        if(this.images.filter(':animated').length > 0) {
             return;
         }
 
-        currentElement.fadeOut();
-        prevElement.fadeIn();
         
+        currentImage.fadeOut();
+        prevImage.fadeIn();
+        console.log(this.images.filter(':animated').length);
     }
+}
 
-};
+Slider.init({
+    selector: '.gallery__img'
+});
 
-// (function($) {
+$('.prev').on('click', function() {
+    Slider.prev();
+});
 
-    Slider.init({
-        selector: '.cover'
-    });
+$('.next').on('click', function() {
+    Slider.next();
+});
 
-    $('.prev').on('click', function() {
-        Slider.prev();
-    })
-
-    $('.next').on('click', function() {
-        Slider.next();
-    })
-
-    $(document).on('keydown', function(e) {
-        var keys = {left: 65, right: 68};
-
-        switch (e.which) {
-            case keys.left:
-                Slider.prev();
-            case keys.right:
-                Slider.next();
-                break;
-        }
-    })
-
-// })(jQuery)

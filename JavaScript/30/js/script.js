@@ -1,11 +1,11 @@
-$('.post-title')
-	.css({ position: 'relative'})
-	.addClass('round-round-baby')
-	.animate({ left: 400 }, {
-		duration: 1500,
-		easing: 'linear'
-	})
-	.animate({ top: -800 }, 800);
+// $('.post-title')
+// 	.css({ position: 'relative'})
+// 	.addClass('round-round-baby')
+// 	.animate({ left: 400 }, {
+// 		duration: 1500,
+// 		easing: 'linear'
+// 	})
+// 	.animate({ top: -800 }, 800);
 
 // $('.post-title')
 // 	.css({ position: 'relative' })
@@ -24,3 +24,5 @@ $('.post-title')
 // 		// else e.addClass(className);
 // 		// $(this).addClass('round-round-baby');
 // 	});
+
+

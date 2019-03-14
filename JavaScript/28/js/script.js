@@ -27,6 +27,7 @@
 
 			console.log(this);
 
+			// zlucenie  -> do configu sa hodia hodnoty zo settings
 			$.extend( slider.config, settings );
 
 			this.intervalID = setInterval(function() {

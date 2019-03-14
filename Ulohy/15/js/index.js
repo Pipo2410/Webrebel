@@ -1,53 +1,58 @@
 var Slider = {
-    
+
     images: null,
+    selector: null,
     current: null,
 
     init: function(data) {
         this.images = $(data.selector);
-        this.images.not(':last-child').hide();
+        this.selector = data.selector
+        this.images.not(':last').hide();
+
+        setInterval(function() {
+            Slider.next();
+        }, 5000);
     },
 
     prev: function() {
         this.current = this.images.filter(':visible');
-
-        var prev = this.current.prev( '.gallery__img' );
+        var prev = this.current.prev(this.selector);
 
         if(prev.length < 1) {
             prev = this.images.last();
         }
 
         this.change(this.current, prev);
+
     },
-    
+
     next: function() {
         this.current = this.images.filter(':visible');
+        var next = this.current.next(this.selector);
 
-        var next = this.current.next( '.gallery__img' );
-
-        if(next.length < 1) {
+        if (next.length < 1) {
             next = this.images.first();
         }
 
         this.change(this.current, next);
     },
 
-    change: function(currentImage, prevImage) {
+    change: function(current, next) {
 
-        if(this.images.filter(':animated').length > 0) {
+        if (this.images.filter(':animated').length > 0) {
             return;
         }
 
-        
-        currentImage.fadeOut();
-        prevImage.fadeIn();
-        console.log(this.images.filter(':animated').length);
+        current.fadeOut('slow');
+        next.fadeIn('slow');
     }
-}
+
+};
 
 Slider.init({
     selector: '.gallery__img'
 });
+
 
 $('.prev').on('click', function() {
     Slider.prev();
@@ -57,3 +62,23 @@ $('.next').on('click', function() {
     Slider.next();
 });
 
+$(document).on('keydown', function(e) {
+
+    var keys = {
+        left: 65,
+        right: 68,
+        leftArrow: 37,
+        rightArrow: 39
+    }
+
+    switch (e.which) {
+        case keys.left:
+        case keys.leftArrow:
+            Slider.prev();
+        case keys.right:
+        case keys.rightArrow:
+            Slider.next();
+            break;
+    };
+
+});

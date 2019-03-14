@@ -346,12 +346,25 @@ footer li:last-child:after {
 	animation: spin 1s infinite linear;
 }
 
+.pulse {
+	animation: pulse 1s infinite linear;
+}
+
 @keyframes spin {
 	0% {
 		transform: rotate(0deg)
 	}
 	100% {
 		transform: rotate(360deg)
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+	100% {
+		transform: scale3d(1.5, 1.5, 1.5);
 	}
 }
 

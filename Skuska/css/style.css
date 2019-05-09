@@ -813,10 +813,15 @@ body {
 
 .backToTop {
   position: fixed;
-  bottom: 5rem;
-  right: 5rem;
-  z-index: 30; }
-  .backToTop__icon {
-    width: 5rem;
-    height: 5rem;
-    fill: #55c57a; }
+  bottom: 10rem;
+  right: 10rem;
+  width: 10rem;
+  height: 10rem; }
+  .backToTop__up {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    -webkit-mask-image: url("../img/backToTop.svg");
+    mask-image: url("../img/backToTop.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover; }

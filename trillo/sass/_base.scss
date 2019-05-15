@@ -38,30 +38,28 @@ Grey dark 3: #999
 }
 
 * {
-    &, &::after, &::before {
-        padding: 0;
+    &, &::before, &::after {
         margin: 0;
-        -webkit-box-sizing: inherit;
-                box-sizing: inherit;
+        padding: 0;
+        box-sizing: inherit;
     }
 }
 
 html {
+    box-sizing: border-box;
     font-size: 62.5%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
 }
 
 body {
+    color: var(--color-grey-dark-2);
+    line-height: 1.6;
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: var(--color-grey-dark-2);
-    color: var(--color-grey-dark-2);
 
-    background-image:-webkit-gradient(linear, left top, right bottom, from(var(--color-primary-light)), to(var(--color-primary-dark)));
-
-    background-image:linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    background-image: linear-gradient(
+        to right bottom,
+        var(--color-primary-light),
+        var(--color-primary-dark));
     background-repeat: no-repeat;
     min-height: 100vh;
 }

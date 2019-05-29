@@ -1,107 +1,72 @@
-// function Person () {
-//     this.name = prompt('What is your name?');
-//     this.yearOfBirth = prompt('When have you been born?');
-//     this.years = this.arrayCalc([this.yearOfBirth], this.calcAge);
-// }
+var scores, roundScore, activePlayer, isPlaying;
+init();
 
-// Person.prototype.calcAge = function(el) {
-//     return 2019 - el;
-// }
-
-// Person.prototype.arrayCalc = function(arr, fn) {
-
-//     var arrayAges = [];
-//     for(var i = 0; i < arr.length; i++) {
-//         // arrayAges.push(fn(arr[i]));
-//         arrayAges[i] = fn(arr[i]);
-//     }
-//     return arrayAges;
-// }
-
-// var numberOfPeople = Number(prompt('How many people we have?'));
-
-// function createDatabase () {
-//     var students = [];
-
-//     for(var i = 0; i < numberOfPeople; i++) {
-//         // students.push(new Person());
-//         // students[i].age = students[i].calcAge();
-
-//         students[i] = new Person();
-//         students[i].age = students[i].calcAge(students[i].yearOfBirth);
-
-//         students[i].ages = students[i].arrayCalc([students[i].yearOfBirth], students[i].calcAge);
-
-//     }
-//     return students;
-// }
-
-// var people = createDatabase();
-// console.log(people);
-
-
-// var numberOfPeople = Number(prompt('How many people we have?'));
-
-// var personProto = {
-//     calcAge: function(year) {
-//         return 2019 - year
-//     }
-// }
-
-// function createDatabase () {
-//     var students = [];
-
-//     for(var i = 0; i < numberOfPeople; i++) {
-        
-//         students[i] = Object.create(personProto, {
-//             yearOfBirth: { value: Number(prompt('When have you been born??')) }
-//         });
-//         students[i].age = students[i].calcAge(students[i].yearOfBirth);
-
-//     }
-//     return students;
-// }
-
-// var people = createDatabase();
-// console.log(people);
-
-
-
-
-var numberOfPeople = Number(prompt('How many people we have?'));
-
-
-function Person() {
-    this.name = prompt('What is your name?');
-    this.yearOfBirth = prompt('When have you been born?');
-    this.years = this.calcAge(this.yearOfBirth);
-    this.agessssss = this.arrayCalc([this.yearOfBirth], this.calcAge);
-}
-
-Person.prototype.calcAge = function(year) {
-    return 2019 - year;
-}
-
-Person.prototype.arrayCalc = function(arr, fn) {
-    var arrRes = [];
-
-    for(var i = 0; i < arr.length; i++) {
-        arrRes.push(fn(arr[i]));
+document.querySelector('.btn-roll').addEventListener('click', function() {
+    
+    if (isPlaying) {
+        var dice = Math.floor(Math.random() * 6) + 1;
+        document.querySelector('.dice').src = 'dice-' + dice + '.png';
+        document.querySelector('.dice').style.display = 'block';
+    
+        if (dice !== 1) {
+            roundScore+= dice;
+            document.querySelector('#current-' + activePlayer).textContent = roundScore;
+        } else {
+           nextPlayer();
+        }
     }
-    return arrRes;
-}
 
-function createDatabase() {
-    var students = [];
+});
 
-    for(var i = 0; i < numberOfPeople; i++) {
-        students.push(new Person());
-        students[i].age = students[i].calcAge(students[i].yearOfBirth);
-
-        students[i].hablar = students[i].arrayCalc([students[i].yearOfBirth], students[i].calcAge);
+document.querySelector('.btn-hold').addEventListener('click', function() {
+    
+    if (isPlaying) {
+        scores[activePlayer] += roundScore;
+        document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+    
+        if (scores[activePlayer] >= 20) {
+            document.querySelector('.dice').style.display = 'none';
+            document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
+            document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
+            document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+            isPlaying = false;
+        } else {
+            nextPlayer();
+        }
     }
-    return students;
+
+});
+
+document.querySelector('.btn-new').addEventListener('click', init);
+
+
+function init() {
+    scores = [0,0];
+    roundScore = 0;
+    activePlayer = 0;
+    isPlaying = true;
+
+    document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.player-0-panel').classList.remove('winner');
+    document.querySelector('.player-1-panel').classList.remove('winner');
+    document.querySelector('.player-0-panel').classList.remove('active');
+    document.querySelector('.player-1-panel').classList.remove('active');
+    document.querySelector('.player-0-panel').classList.add('active');
+    document.querySelector('#score-0').textContent = '0';
+    document.querySelector('#score-1').textContent = '0';
+    document.querySelector('#current-0').textContent = '0';
+    document.querySelector('#current-1').textContent = '0';
+    document.querySelector('#name-0').textContent = 'Player1';
+    document.querySelector('#name-1').textContent = 'Player2';
 }
 
-var people = createDatabase();
-console.log(people);
+function nextPlayer () {
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+    roundScore = 0;
+
+    document.querySelector('.dice').style.display = 'none';
+    document.querySelector('#current-0').textContent = '0';
+    document.querySelector('#current-1').textContent = '0';
+    document.querySelector('.player-0-panel').classList.toggle('active');
+    document.querySelector('.player-1-panel').classList.toggle('active');
+}

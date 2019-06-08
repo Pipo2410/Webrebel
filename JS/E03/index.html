@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click me, lick me</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <article>
+        <ul id="browser">
+            <!--  -->
+        </ul>
+        <ul id="user">
+            <!--  -->
+        </ul>
+    </article>
+
+    <script>
+        
+        var browserList = document.getElementById('browser'),
+            newItem = document.createElement('li');
+
+        newItem.textContent = 'Page loaded, bitch';
+        browserList.appendChild(newItem);
+
+        document.body.addEventListener('click', function clickedIt() {
+            var userList = document.getElementById('user'),
+                newItem = document.createElement('li');
+
+            newItem.textContent = 'clicked it';
+            userList.appendChild(newItem);
+        });
+
+        document.body.addEventListener('mousemove', function movedIt() {
+            var userList = document.getElementById('user'),
+                newItem = document.createElement('li');
+
+            newItem.textContent = 'moved it';
+            userList.appendChild(newItem);
+        });
+
+        
+
+    </script>
+
+</body>
+</html>

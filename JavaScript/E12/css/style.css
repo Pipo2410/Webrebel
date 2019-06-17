@@ -1,0 +1,31 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: rgb(200, 20, 20);
+    position: relative;
+    height: 100vh;
+}
+
+article {
+    background-color: rgb(241, 225, 39);
+    padding: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#browser {
+    font-weight: bold;
+}
+
+#user {
+    color: rgb(200, 20, 20);
+}

@@ -36,7 +36,6 @@ document.body.addEventListener('keypress', function keyboardedIt(event) {
         newTop = oldTop + 10;
     }
 
-
     // if(event.key == 'a') {
     //     newLeft = oldLeft - 10;
     //     // addMessage('user', 'Go left');

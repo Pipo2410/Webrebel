@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click me, lick me</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <article>
+        <ul id="browser">
+            <!--  -->
+        </ul>
+        <ul id="user">
+            <!--  -->
+        </ul>
+    </article>
+
+    <script>
+
+        function addMessage( elementId, message) {
+            var browserList = document.getElementById(elementId),
+                newItem = document.createElement('li');
+
+            newItem.textContent = message;
+
+            browserList.appendChild(newItem);
+        }
+
+        addMessage('browser', 'Page loaded, bitch');
+
+        document.body.addEventListener('click', function clickedIt () {
+            addMessage('user', 'totally clicked it');
+        });
+
+        document.body.addEventListener('keyup', function keyboardedIt (event) {
+            addMessage('user', 'keyboraded');
+        });
+
+        window.addEventListener('beforeunload', function(event) {
+            addMessage('browser', 'don\'t try to close me!');
+
+            event.returnValue = ':(';
+            return ':('; // just for IE and old browsers
+        })
+
+    </script>
+
+</body>
+</html>

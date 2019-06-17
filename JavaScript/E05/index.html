@@ -17,29 +17,25 @@
     </article>
 
     <script>
-        
 
-        function addMessage(elementId, message) {
+        function addMessage( elementId, message) {
             var browserList = document.getElementById(elementId),
                 newItem = document.createElement('li');
 
             newItem.textContent = message;
+
             browserList.appendChild(newItem);
         }
 
+        addMessage('browser', 'Page loaded, bitch');
 
-        addMessage('browser', 'Page loaded, biatch');
-        
-
-        document.body.addEventListener('click', function clickedIt() {
-            addMessage('user', 'totaly clicked it');
+        document.body.addEventListener('click', function clickedIt () {
+            addMessage('user', 'totally clicked it');
         });
 
-        document.body.addEventListener('keyup', function movedIt() {
-            addMessage('user', 'keyboarded!');
+        document.body.addEventListener('keyup', function keyboardedIt () {
+            addMessage('user', 'keyboraded');
         });
-
-        
 
     </script>
 

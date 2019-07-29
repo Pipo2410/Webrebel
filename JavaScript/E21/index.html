@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Vašo a Mič</title>
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:900">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<main>
+		<article class="content container">
+
+			<h2 class="shadow">kto je väčšia</h2>
+			<h1 class="shadow">sex mašina?</h1>
+
+			<section class="choice">
+				<div class="pull-left mitch">
+					<img src="img/mitch.jpg" alt="mitch">
+					<p class="score">0</p>
+				</div>
+
+				<div class="pull-right vasho">
+					<img src="img/vasho.jpg" alt="vasho" id="vasho">
+					<p class="score">15</p>
+				</div>
+			</section>
+
+		</article>
+	</main>
+
+	<script src="js/lodash.min.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+</html>
+
+<!-- 
+// var dudes = document.querySelectorAll('.choice img');
+// dudes = Array.prototype.slice.call( dudes );
+
+// dudes.forEach(function(dude) {
+
+//     updateDude(dude);
+
+//     dude.addEventListener('click', function() {
+
+//         var score = getScore(dude);
+//         score++;
+
+//         setScore(dude, score);
+//         updateDude(dude);
+
+//         // get key from dude 
+//        // get score from localStorage
+
+//        // set new score to localStorage
+//        // update DOM element
+
+//     });
+    
+//    dude.addEventListener('mouseover', function() {
+//        var otherItem = _.without(dudes, this)[0];
+//        otherItem.classList.add('desaturate');
+//    });
+    
+//    dude.addEventListener('mouseout', function() {
+//        var otherItem = _.without(dudes, this)[0];
+//        otherItem.classList.remove('desaturate');
+//    });
+
+// });
+
+
+// function getKeyFrom(dude) {
+//     return 'score' + _.capitalize( dude.alt);
+// }
+
+// function getScore( dude ) {
+//     return +localStorage.getItem( getKeyFrom(dude)) || 0; // ||0 default operator
+// }
+
+// function setScore( dude, score ) {
+//     return +localStorage.setItem(getKeyFrom(dude), score);
+// }
+
+// function updateDude(dude) {
+//     var score = getScore(dude);
+//     dude.nextElementSibling.textContent = score;
+// } -->

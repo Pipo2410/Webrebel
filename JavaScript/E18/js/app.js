@@ -3,18 +3,27 @@ dudes = Array.prototype.slice.call(dudes);
 
 
 document.getElementsByTagName('h1')[0].addEventListener('click', function() {
-    var score = +localStorage.getItem('sexytime');
+    
+    var score = +localStorage.getItem('score');
 
-    if( !score ) {
-        score = 0;
-    }
+    var data = [
+        {
+            name: 'vasho',
+            sexiness: 'off the charts',
+            score: score
+        },
+        {
+            name: 'mitch',
+            sexiness: 'hamburger off the floor',
+            score: score
+        }
+    ]
 
-    localStorage.setItem('sexytime', ++score); // nemusim predtym score++ aleb takymto sposobom pridam 1 predtym ako ju pouzijem
+    console.log( JSON.stringify(data));
 
+    localStorage.setItem('score', ++score); // nemusim predtym score++ aleb takymto sposobom pridam 1 predtym ako ju pouzijem 
+    localStorage.setItem('sexytime', JSON.stringify(data));
 
-    if (score > 7) {
-        localStorage.removeItem('sexytime');
-    }
 });
 
 

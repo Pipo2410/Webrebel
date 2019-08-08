@@ -42,9 +42,11 @@ textarea {
   bottom: 0.625em;
   right: 0.80em; }
 
-svg circle {
-  fill: none;
-  stroke-width: 2; }
+svg {
+  transform: rotate(-90deg); }
+  svg circle {
+    fill: none;
+    stroke-width: 2; }
 
 .underlay {
   stroke: #ccc; }

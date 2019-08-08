@@ -1,0 +1,14 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "learning2code",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/base.scss css/style.css -w"
+  },
+  "author": "Peter",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

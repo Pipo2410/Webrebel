@@ -1,0 +1,20 @@
+//
+//	SVG
+// ------------------------------------------------------
+
+svg {
+	transform: rotate(-90deg);
+	circle {
+		fill: none;
+		stroke-width: $stroke-width;
+	}
+}
+
+.underlay {
+	stroke: $color-underlay;
+}
+
+.progress {
+	stroke: $color-safe;
+	stroke-width: $stroke-progress;
+}

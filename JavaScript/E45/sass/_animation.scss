@@ -1,0 +1,32 @@
+//
+//	ANIMATIONS
+// ------------------------------------------------------
+
+@keyframes blink {
+	0% { stroke-width: $stroke-thicc; }
+	10% { stroke-width: $stroke-bounce; }
+	100% { stroke-width: $stroke-thicc }
+}
+
+.progress {
+	stroke-dasharray: 163.36281798666926;
+	stroke-dashoffset: 120;
+}
+
+.rotateCircle {
+	animation: spinMeBaby .5s linear;
+}
+
+.spin2 {
+	animation: spinBack .5s linear;
+}
+
+@keyframes spinMeBaby {
+	0% { transform: rotate(-90deg) }
+	100% { transform: rotate(270deg) }
+}
+
+@keyframes spinBack {
+	0% { transform: rotate(270deg) }
+	100% { transform: rotate(-90deg) }
+}
